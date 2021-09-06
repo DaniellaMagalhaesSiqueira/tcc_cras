@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.FormularioFamiliaControlador">
+   <children>
+      <GridPane layoutX="9.0" layoutY="1.0" prefHeight="290.0" prefWidth="930.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="569.9999618530273" minWidth="0.0" prefWidth="0.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="881.6666666666667" minWidth="10.0" prefWidth="881.6666666666667" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="569.9999618530273" minWidth="0.0" prefWidth="0.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="31.999996821085613" minHeight="10.0" prefHeight="31.999996821085613" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="31.999996821085613" minHeight="10.0" prefHeight="31.999996821085613" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="49.666656494140625" minHeight="10.0" prefHeight="38.00000317891438" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="49.33333333333333" minHeight="10.0" prefHeight="34.000003814697266" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="58.66668446858725" minHeight="10.0" prefHeight="44.66667175292969" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="29.333343505859375" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="34.666656494140625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="49.333343505859375" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="49.33331298828125" minHeight="10.0" prefHeight="39.33333333333337" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="unidadeNome" prefHeight="17.0" prefWidth="247.0" text="Unidade CRAS ...">
+                     <HBox.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="idFamilia" text="código:  ">
+                     <HBox.margin>
+                        <Insets left="10.0" right="120.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="Data de inclusão: ">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtDataInclusao" prefHeight="25.0" prefWidth="96.0">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label fx:id="labelAtivo" text="CADASTRO ATIVO">
+                     <HBox.margin>
+                        <Insets left="80.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <children>
+                  <Label prefHeight="16.0" prefWidth="85.0" text="Renda Total R$:">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtRenda" disable="true" editable="false" prefHeight="25.0" prefWidth="78.0" promptText="0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="Renda Per Capita  R$:">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtPerCapita" disable="true" editable="false" prefHeight="25.0" prefWidth="77.0" promptText="0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="Total de Benefícios R$:">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtTotalBeneficio" disable="true" editable="false" prefHeight="25.0" prefWidth="71.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <CheckBox fx:id="checkMulherChefe" mnemonicParsing="false" onAction="#clicarMulher" text="Mulher Chefe de Família" wrapText="true">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </CheckBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <Label text="Bairro:">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboBairro" onAction="#clicarBoxBairro" prefHeight="25.0" prefWidth="133.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="comboTipoMoradia" onAction="#clicarBoxMoradia" prefHeight="25.0" prefWidth="115.0" promptText="tipo moradia">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <TextField fx:id="txtAlugada" disable="true" prefHeight="25.0" prefWidth="81.0" promptText="0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="Telefones:">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtTel1" prefHeight="25.0" prefWidth="126.0" promptText="telefone(1)">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="txtTel2" prefHeight="25.0" prefWidth="126.0" promptText="telefone(2)">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="txtTel3" prefHeight="25.0" prefWidth="126.0" promptText="telefone(3)">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <children>
+                  <Label text="Situação da Família:">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="situacao" text="Situação">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="Técnico de Referência:">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="tecnico" text="Técnico de Referência da Família">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="Data de Entrada em Acomp.:" wrapText="true">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtDataAcompanhamento" disable="true" editable="false" prefHeight="25.0" prefWidth="113.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <CheckBox fx:id="checkPerfilCREAS" mnemonicParsing="false" onAction="#clicarCREAS" text="Perfil CREAS">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </CheckBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="41.0" prefWidth="882.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="98.0" text="Data do último Atendimento:" wrapText="true">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtDataAtendimento" disable="true" editable="false" prefHeight="25.0" prefWidth="84.0">
+                     <HBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label prefHeight="36.0" prefWidth="110.0" text="Ultima atualização do Cad. Único:" wrapText="true">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="txtDataCad" disable="true" editable="false" prefHeight="25.0" prefWidth="83.0">
+                     <HBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <CheckBox fx:id="checkDescumprimento" mnemonicParsing="false" onAction="#clicarDescumprimento" prefHeight="26.0" prefWidth="218.0" text="Descumprimento de Condicionalidades" wrapText="true">
+                     <HBox.margin>
+                        <Insets left="40.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Label text="Endereço:">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboTipoEndereco" onAction="#clicarBoxEndereco" prefHeight="25.0" prefWidth="89.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <TextField fx:id="txtLogradouro" prefHeight="25.0" prefWidth="233.0" promptText="nome do logradouro">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="Nº: ">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtNumero" prefHeight="25.0" prefWidth="48.0">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label prefHeight="17.0" prefWidth="81.0" text="Complemento:">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtComplemento" prefHeight="25.0" prefWidth="171.0" promptText="complemento">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="CEP: ">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtCep" prefHeight="25.0" prefWidth="85.0">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Pessoa de Referência:">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtReferencia" prefHeight="25.0" prefWidth="329.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label fx:id="idPessoa" prefHeight="17.0" prefWidth="154.0" text="Código pessoa: ">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="btAlterarPesReferencia" mnemonicParsing="false" onAction="#clicarAlterarPesReferencia" prefHeight="26.0" prefWidth="183.0" text="Alterar Pessoa de Referência" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="80.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <Label text="Encaminhada: ">
+                     <HBox.margin>
+                        <Insets right="10.0" top="7.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboRede" onAction="#clicarRede" prefHeight="25.0" prefWidth="349.0">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <TextField fx:id="telNome1" prefHeight="25.0" prefWidth="126.0" promptText="nome telefone (1)">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="telNome2" prefHeight="25.0" prefWidth="126.0" promptText="nome telefone (2)">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="telNome3" prefHeight="25.0" prefWidth="126.0" promptText="nome telefone (3)">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+      <TableView fx:id="tabelaPessoas" cache="true" layoutX="27.0" layoutY="326.0" maxHeight="-Infinity" prefHeight="197.0" prefWidth="656.0">
+        <columns>
+          <TableColumn fx:id="colunaNome" maxWidth="400.0" minWidth="-Infinity" prefWidth="230.0" text="Nome: " />
+            <TableColumn fx:id="colId" maxWidth="110.0" minWidth="-Infinity" prefWidth="110.0" text="código:" />
+          <TableColumn fx:id="colunaIdade" maxWidth="100.0" minWidth="-Infinity" prefWidth="100.0" text="Idade:" />
+            <TableColumn fx:id="colunaParentesco" maxWidth="300.0" minWidth="-Infinity" prefWidth="140.0" resizable="false" text="Parentesco:" />
+            <TableColumn fx:id="colunaRenda" maxWidth="200.0" minWidth="-Infinity" prefWidth="120.0" text="Renda:" />
+            <TableColumn fx:id="colunaBeneficio" maxWidth="330.0" minWidth="-Infinity" prefWidth="180.0" text="Benfícios:" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <HBox layoutX="372.0" layoutY="547.0" prefHeight="25.0" prefWidth="203.0">
+         <children>
+            <Button fx:id="btSalvar" mnemonicParsing="false" onAction="#clicarSalvar" prefHeight="25.0" prefWidth="59.0" text="Salvar">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="80.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btCancelar" mnemonicParsing="false" onAction="#clicarCancelar" text="Cancelar">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+      <Button fx:id="btEscolherPessoa" layoutX="697.0" layoutY="399.0" mnemonicParsing="false" onAction="#clicarEscolherPessoa" prefHeight="25.0" prefWidth="233.0" text="Escolher uma Pessoa do Banco de Dados" />
+      <Button fx:id="btCriarPessoa" layoutX="697.0" layoutY="359.0" mnemonicParsing="false" onAction="#clicarCriarPessoa" text="Adicionar" />
+      <Label layoutX="41.0" layoutY="300.0" text="Composição Familiar:" />
+      <Button fx:id="btDesligar" layoutX="746.0" layoutY="466.0" mnemonicParsing="false" onAction="#clicarDesligar" prefHeight="25.0" prefWidth="120.0" text="Desligar Família">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelMotivoDesligamento" alignment="TOP_LEFT" layoutX="746.0" layoutY="535.0" prefHeight="50.0" prefWidth="183.0" text="Motivo do Desligamento: " textAlignment="JUSTIFY" wrapText="true" />
+      <Label fx:id="labelDataDesligamento" layoutX="744.0" layoutY="505.0" text="Data do Desligamento: " />
+      <Separator layoutX="697.0" layoutY="449.0" prefHeight="3.0" prefWidth="218.0" />
+      <Separator layoutX="34.0" layoutY="298.0" prefHeight="3.0" prefWidth="882.0" />
+      <Button fx:id="btRemover" layoutX="859.0" layoutY="359.0" mnemonicParsing="false" onAction="#clicarRemover" text="Remover" />
+      <Button fx:id="btEditar" layoutX="783.0" layoutY="359.0" mnemonicParsing="false" onAction="#clicarEditar" text="Editar" />
+      <Label layoutX="698.0" layoutY="317.0" text="Opções para pessoas da família:" />
+      <Separator layoutX="693.0" layoutY="448.0" orientation="VERTICAL" prefHeight="131.0" prefWidth="3.0" />
+   </children>
+</AnchorPane>
